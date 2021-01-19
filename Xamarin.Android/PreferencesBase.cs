@@ -363,7 +363,7 @@ namespace Xamarin.Android
     //class EXAMPLE : PreferencesBase
     //{
     //    public override string name { get { return "EXAMPLE"; } }
-    //    protected override FileCreationMode fileCreationMode { get { return FileCreationMode.WorldWriteable; } }
+    //    protected override FileCreationMode fileCreationMode { get { return FileCreationMode.Private; } }
     //    public EXAMPLE(Context _context) : base(_context) { }
 
     //    #region Value
@@ -384,7 +384,7 @@ namespace Xamarin.Android
 
     abstract class Preferences_String: PreferencesBase
     {
-        protected sealed override FileCreationMode fileCreationMode { get { return FileCreationMode.WorldWriteable; } }
+        protected sealed override FileCreationMode fileCreationMode { get { return FileCreationMode.Private; } }
         public Preferences_String(Context _context) : base(_context) { }
 
         abstract protected string key { get; }
